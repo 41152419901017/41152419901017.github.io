@@ -55,10 +55,10 @@
   <div class="entry-content">
     
       <hr>
-<p>title: </p><h2>hexo+github搭建自己的博客</h2><br>date: 2016-05-11 15:31:25<br>tags:<br><a href="http://zouqianghtml.github.io/" target="_blank" rel="external"> 友情链接-邹强<a><br>、<a href="http://lcsoul.github.io/" target="_blank" rel="external">刘畅<a><br>、<a href="http://ker95.github.io/" target="_blank" rel="external">龚克<a>博客<br><br><br><a style="color:green" href="http://www.jianshu.com/p/465830080ea9#" target="_blank" rel="external">本文系转载</a><br> <h3> 正文</h3><br> <p>hexo是一款基于NOde.js的静态博客框架,这篇教程是针对与Mac的,不啰嗦,直接上搭建步骤.<br><br><br> </p><h2>配置环境</h2><br> <em>安装Node</em>（必须）<p></p>
+<p>title: </p><h2>hexo+github搭建自己的博客</h2><br>date: 2016-05-11 15:31:25<br>tags:<br><a href="http://zouqianghtml.github.io/" target="_blank" rel="external"> 友情链接-邹强<a><br>、<a href="http://lcsoul.github.io/" target="_blank" rel="external">刘畅<a><br>、<a href="http://ker95.github.io/" target="_blank" rel="external">龚克<a><br><a href="http://crackerme.github.io/" target="_blank" rel="external">孙平</a>博客<br><br><br><a style="color:green" href="http://www.jianshu.com/p/465830080ea9#" target="_blank" rel="external">本文系转载</a><br> <h3> 正文</h3><br> <p>hexo是一款基于NOde.js的静态博客框架,这篇教程是针对与Mac的,不啰嗦,直接上搭建步骤.<br><br><br> </p><h2>配置环境</h2><br> <em>安装Node</em>（必须）<p></p>
 <p> <img src="http://d3.freep.cn/170_3tb_1605120914026s9l564563.png" alt="Mou icon"><br> /Users/lanou/Desktop/17AAA232-705F-4D09-86D4-C75A0B8BEE11.png</p>
 <p>####（安装我选择圈圈的稳定版）</p>
-<p>作用：用来生成静态页面</p><br> <p> 到Node.js官网下载</p><br> <p>安装git</p><br> <p>作用：把本地的hexo内容提交到github上去</p><br> <p>安装Xcode就自带有git,我就不多说了。</p><br> <p>申请github</p><br> <p>作用：用来做博客的远程创库、域名、服务器之类的，怎么与本地hexo建立连接等下讲</p><br> <br><br> <p>github账号我也不再啰嗦了，没有的话直接申请就行了，跟一般的注册账号差多多，</p><p><br></p><p>创建SSH:ssh-keygen</p>
+<p>作用：用来生成静态页面</p><br> <p> 到Node.js官网下载</p><br> <p>安装git</p><br> <p>作用：把本地的hexo内容提交到github上去</p><br> <p>安装Xcode就自带有git,我就不多说了。</p><br> <p>申请github</p><br> <p>作用：用来做博客的远程创库、域名、服务器之类的，怎么与本地hexo建立连接等下讲</p><br> <br><br> <p>github账号我也不再啰嗦了，没有的话直接申请就行了，跟一般的注册账号差多多，</p><p><br></p><p style="color:green">创建SSH:ssh-keygen</p>
 
 
 <ul>
@@ -86,8 +86,9 @@
 <li>|         ….. . |</li>
 <li>+—-[SHA256]—–+</li>
 </ul>
- <p> 然后操作 ：q  center<br><br>###正式安装hexo<br></p><p> Node和git都安装好后,首先创建一个文件夹,如blog,用户存放hexo的配置文件,然后进入blog里安装Hexo.</p><br><p>执行命令安装Hexo: sudo npm install -g hexo </p><br><p>然后,执行 hexo init 初始化</p><br><p>至此，全部安装工作已经完成！blog就是你的博客根目录，所有的操作都在里面进行</p><br><p> hexo server </p><br><em> INFO  Start processing
-</em> INFO  Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>. Press Ctrl+C to stop. 启动服务,告诉网址和<br>theme: landscape  主题<br><p>获得登录本地的网址 ,启动本地服务，进行文章预览调试</p>
+ <p> 然后操作 ：q  center<br> </p><p style="color:green">查看SSH:vim ~/.ssh/id_rsa.pub</p>出现：<br><br>     52:blog lanou$ ls<br>      _config.yml node_modules scaffolds themes<br>       db.json package.json source<br>       52:blog lanou$ cd ..<br>     52:Desktop lanou$ ls<br><br>  <p style="color:green">执行克隆,+后缀</p><br>    <p>52:Desktop lanou$ git clone git@github.com:41152419901017/html3-.git</p><br>    <p>hexo g   生成</p><br>    <p>第一次会由用户名与密码</p><br>    <p>hexo d   部署 </p><br>###正式安装hexo<br><p> Node和git都安装好后,首先创建一个文件夹,如blog,用户存放hexo的配置文件,然后进入blog里安装Hexo.</p><br><p>执行命令安装Hexo: sudo npm install -g hexo </p><br><p>然后,执行 hexo init 初始化</p><br><p>至此，全部安装工作已经完成！blog就是你的博客根目录，所有的操作都在里面进行</p><br><p> hexo server </p><br><em> INFO  Start processing
+</em> INFO  Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>. Press Ctrl+C to stop. 启动服务,告诉网址和<br>theme: landscape  主题<br><p>获得登录本地的网址 ,启动本地服务，进行文章预览调试</p><br><h3>配置github</h3><br><p>建立Repository仓库</p><br><p>建立与你用户名对应的仓库，仓库名必须为 </p><p style="color:green"> 你的名字.github.io</p><p></p><br><p>然后建立关联，我的在本地/users/lanou/blog,里面有：</p><br><h4>文件</h4>：<br><br>                       _config.yml   db.json  node_modules<br><br>                       package.json   public scaffolds<br><br>                       source         themes<br> <p>现在我们需要——config.ylm文件，来建立关联，命令</p>
+
 
 
 
