@@ -46,6 +46,101 @@
   <header>
     
   
+    <h1 class="title"><a href="/2016/05/12/伪类/">伪类</a></h1>
+  
+
+    <time datetime="2016-05-12T09:49:52.000Z">
+  <span class="day">12</span><span class="month">May</span>
+</time>
+  </header>
+  <div class="entry-content">
+    
+      <p>####A 、伪类 :<br>a /love/ hate /  hover /  （ active（点击）/  visited（访问后） / link（未访问） :a 只针对a 标签  ）</p>
+<p>单冒号是伪类</p>
+<p>###B 、伪元素 ::<br> <em>first-line: 文本第一行</em><br><br> <em>first-letter</em>： 首字母 <br><br> before   <br>内部之前有元素，元素之前，有内容内容之前,再次同元素会覆盖<br> after   <br><br> selection 只能改变background  和选中字体颜色,改变不了first-line first-letter改变过的属性</p>
+<p></p><h3>米奇老鼠头<h3><p></p>
+<pre><code> .div1{width:200px;
+ height:200px;
+ background:red;
+ border-radius:50%;
+ margin:auto;
+ margin-top:100px;
+ position:relative;
+ }
+
+.div1::before{  content: &quot;我是before1&quot;;/*一定要有*/
+width:50px;
+height:50px;
+display: block;
+color: white;
+background: green;
+border-radius: 50%;
+position: absolute;
+left: 0px;
+top: 0px;
+
+ }
+
+
+
+
+.div1::after{  content: &quot;我是before1&quot;;/*一定要有*/
+width:50px;
+height:50px;
+display: block;
+color: white;
+background: green;
+border-radius: 50%;
+position: absolute;
+left:150px;
+top: 0px;
+
+ }
+
+
+
+ ::selection{  //选中颜色变化，针对全局
+ background:gray;
+ color:yellow;}
+ .div1::selection{  //颜色变化，仅针对div1 的第一层子集内容
+ background:gray;
+ color:yellow;
+ }
+
+
+  如：&lt;span&gt;123456&lt;/span&gt; 可以
+
+ &lt;span&lt;p&gt;123&lt;/span&gt;&lt;/div&gt;//不行
+</code></pre></h3></h3>
+    
+    
+    <footer class="meta">
+      
+      
+      
+    </footer>
+    
+  </div>
+  
+</article>
+
+  <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <header>
+    
+  
     <h1 class="title"><a href="/2016/05/12/第三篇博客/">第三篇博客</a></h1>
   
 
