@@ -55,18 +55,15 @@
   </header>
   <div class="entry-content">
     
-      <p>###1、创建项目文件夹，全局安装gulp：<code>$sudo npm install --global gulp</code></p>
-<p>####2、项目初始化： <code>$ npm init</code></p>
-<p>####3、作为项目的开发依赖(devDependencies)安装：<code>$npm install --save-dev gulp</code><br> <code>出现node_modules / package.json 文件夹</code>                                              </p>
-<p>####4、  在项目根目录下创建一个名为gulpfile.js的文件：<br>      $ lanou$ touch gulpfile.js</p>
-<pre><code>var gulp=require(&apos;gulp&apos;)
-gulp.task(&apos;default&apos;,function(){
+      <h3 id="1、创建项目文件夹，全局安装gulp：-sudo-npm-install-global-gulp"><a href="#1、创建项目文件夹，全局安装gulp：-sudo-npm-install-global-gulp" class="headerlink" title="1、创建项目文件夹，全局安装gulp：$sudo npm install --global gulp"></a>1、创建项目文件夹，全局安装gulp：<code>$sudo npm install --global gulp</code></h3><h4 id="2、项目初始化：-npm-init"><a href="#2、项目初始化：-npm-init" class="headerlink" title="2、项目初始化： $ npm init"></a>2、项目初始化： <code>$ npm init</code></h4><h4 id="3、作为项目的开发依赖-devDependencies-安装：-npm-install-save-dev-gulp"><a href="#3、作为项目的开发依赖-devDependencies-安装：-npm-install-save-dev-gulp" class="headerlink" title="3、作为项目的开发依赖(devDependencies)安装：$npm install --save-dev gulp"></a>3、作为项目的开发依赖(devDependencies)安装：<code>$npm install --save-dev gulp</code></h4><p> <code>出现node_modules / package.json 文件夹</code>                                              </p>
+<h4 id="4、-在项目根目录下创建一个名为gulpfile-js的文件："><a href="#4、-在项目根目录下创建一个名为gulpfile-js的文件：" class="headerlink" title="4、  在项目根目录下创建一个名为gulpfile.js的文件："></a>4、  在项目根目录下创建一个名为gulpfile.js的文件：</h4><pre><code>$ lanou$ touch gulpfile.js
 
-console.log(&apos;Hello Wrold&apos;)
-})
-</code></pre><p>####5、运行gulp :  <code>$gulp</code>  输出 Hello wrold</p>
-<p>####6、安装插件：concat-合并 jsmin-js压缩 rename-加后缀  </p>
-<h4 id="sudo-npm-install-save-dev-gulp-concat"><a href="#sudo-npm-install-save-dev-gulp-concat" class="headerlink" title="$sudo npm install --save-dev gulp-concat"></a><code>$sudo npm install --save-dev gulp-concat</code></h4><h4 id="npm-install-save-dev-gulp-jsmin"><a href="#npm-install-save-dev-gulp-jsmin" class="headerlink" title="$ npm install --save-dev gulp-jsmin"></a><code>$ npm install --save-dev gulp-jsmin</code></h4><h4 id="npm-install-save-dev-gulp-rename"><a href="#npm-install-save-dev-gulp-rename" class="headerlink" title="$ npm install --save-dev gulp-rename"></a><code>$ npm install --save-dev gulp-rename</code></h4><h4 id="安装好后，我们可以观察package-json的内容"><a href="#安装好后，我们可以观察package-json的内容" class="headerlink" title="安装好后，我们可以观察package.json的内容"></a>安装好后，我们可以观察package.json的内容</h4><pre><code>{
+  var gulp=require(&apos;gulp&apos;)
+  gulp.task(&apos;default&apos;,function(){
+
+  console.log(&apos;Hello Wrold&apos;)
+  })
+</code></pre><h4 id="5、运行gulp-gulp-输出-Hello-wrold"><a href="#5、运行gulp-gulp-输出-Hello-wrold" class="headerlink" title="5、运行gulp :  $gulp  输出 Hello wrold"></a>5、运行gulp :  <code>$gulp</code>  输出 Hello wrold</h4><h4 id="6、安装插件：concat-合并-jsmin-js压缩-rename-加后缀"><a href="#6、安装插件：concat-合并-jsmin-js压缩-rename-加后缀" class="headerlink" title="6、安装插件：concat-合并 jsmin-js压缩 rename-加后缀"></a>6、安装插件：concat-合并 jsmin-js压缩 rename-加后缀</h4><h4 id="sudo-npm-install-save-dev-gulp-concat"><a href="#sudo-npm-install-save-dev-gulp-concat" class="headerlink" title="$sudo npm install --save-dev gulp-concat"></a><code>$sudo npm install --save-dev gulp-concat</code></h4><h4 id="npm-install-save-dev-gulp-jsmin"><a href="#npm-install-save-dev-gulp-jsmin" class="headerlink" title="$ npm install --save-dev gulp-jsmin"></a><code>$ npm install --save-dev gulp-jsmin</code></h4><h4 id="npm-install-save-dev-gulp-rename"><a href="#npm-install-save-dev-gulp-rename" class="headerlink" title="$ npm install --save-dev gulp-rename"></a><code>$ npm install --save-dev gulp-rename</code></h4><h4 id="安装好后，我们可以观察package-json的内容"><a href="#安装好后，我们可以观察package-json的内容" class="headerlink" title="安装好后，我们可以观察package.json的内容"></a>安装好后，我们可以观察package.json的内容</h4><pre><code>{
 &quot;name&quot;: &quot;fack&quot;,
 &quot;version&quot;: &quot;1.0.0&quot;,
 &quot;description&quot;: &quot;&quot;,
@@ -84,8 +81,12 @@ console.log(&apos;Hello Wrold&apos;)
 }
 }
 </code></pre><p> 注： <code>name：为自己安装中命得名  ，后几个为安装的插件信息，插件的另一种安装方法：可以把package.json复制到一个文件夹，即本段内容，终端运行 $ npm install  即安装了上述四个插件，（在node.js环境下）</code></p>
-<p>####gulpfile.js中代码演示：<br>    var gulp = require(‘gulp’);<br>    var  concat=require(‘gulp-concat’)<br>    var jsmin=require(‘gulp-jsmin’)<br>      var rename=require(‘gulp-rename’)</p>
-<pre><code>gulp.task(&apos;b&apos;, function() {
+<h4 id="gulpfile-js中代码演示："><a href="#gulpfile-js中代码演示：" class="headerlink" title="gulpfile.js中代码演示："></a>gulpfile.js中代码演示：</h4><pre><code>var gulp = require(&apos;gulp&apos;);
+var  concat=require(&apos;gulp-concat&apos;)
+var jsmin=require(&apos;gulp-jsmin&apos;)
+  var rename=require(&apos;gulp-rename&apos;)
+
+gulp.task(&apos;b&apos;, function() {
 // 将你的默认的任务代码放在这
 console.log(&quot;nimei&quot;)
 });
@@ -116,8 +117,7 @@ gulp.task(&apos;c&apos;,function(){
 console.log( &apos;hello heffj&apos;    )
 
  }  )
-</code></pre><p>####文件夹一览：    </p>
-<p><img src="http://d3.freep.cn/3tb_160516213340yd9p564563.png" alt="Mou icon"></p>
+</code></pre><h4 id="文件夹一览："><a href="#文件夹一览：" class="headerlink" title="文件夹一览："></a>文件夹一览：</h4><p><img src="http://d3.freep.cn/3tb_160516213340yd9p564563.png" alt="Mou icon"></p>
 <h4 id="注释：gulp有5个基本方法：src、dest、task、run、watch"><a href="#注释：gulp有5个基本方法：src、dest、task、run、watch" class="headerlink" title="注释：gulp有5个基本方法：src、dest、task、run、watch"></a>注释：gulp有5个基本方法：src、dest、task、run、watch</h4><pre><code>    gulp.src()
 
 gulp模块的src方法，用于产生数据流。它的参数表示所要处理的文件，一般有以下几种形式：
@@ -221,9 +221,36 @@ watcher.end() ：停止watcher对象，不会再调用任务或回调函数。
 watcher.files() ：返回watcher对象监视的文件。
 watcher.add(glob) ：增加所要监视的文件，它还可以附件第二个参数，表示回调函数。
 watcher.remove(filepath) ：从watcher对象中移走一个监视的文件。
-</code></pre><p>####学完这些就可以到其官网上找插件了，毕竟插件才是王道。</p>
-<p>####终端代码一览：<br>    代码：<br>    Last login: Mon May 16 15:20:21 on ttys000<br>     52:~ lanou$ cd desktop<br>     52:desktop lanou$ nodejs<br>    -bash: nodejs: command not found<br>     52:desktop lanou$ cd nodejs<br>     52:nodejs lanou$ sudo npm install –global gulp    全局安装gulp<br>     npm WARN deprecated graceful-fs@3.0.8: graceful-fs v3.0.0 and before will fail on node releases &gt;= v7.0. Please update to graceful-fs@^4.0.0 as soon as possible. Use ‘npm ls graceful-fs’ to find it in the tree.<br>     npm WARN deprecated lodash@1.0.2: lodash@<3.0.0 is="" no="" longer="" maintained.="" upgrade="" to="" lodash@^4.0.0.="" npm="" warn="" deprecated="" graceful-fs@1.2.3:="" graceful-fs="" v3.0.0="" and="" before="" will="" fail="" on="" node="" releases="">= v7.0. Please update to graceful-fs@^4.0.0 as soon as possible. Use ‘npm ls graceful-fs’ to find it in the tree.<br>      /usr/local/bin/gulp -&gt; /usr/local/lib/node_modules/gulp/bin/gulp.js<br>      gulp@3.9.1 /usr/local/lib/node_modules/gulp<br>      ├── interpret@1.0.1<br>     ├── pretty-hrtime@1.0.2<br>    ├── deprecated@0.0.1<br>     ├── archy@1.0.0<br>    ├── minimist@1.2.0<br>    ├── semver@4.3.6<br>    ├── tildify@1.2.0 (os-homedir@1.0.1)<br>     ├── v8flags@2.0.11 (user-home@1.1.1)<br>     ├── orchestrator@0.3.7 (stream-consume@0.1.0, sequencify@0.0.7, end-of-stream@0.1.5)<br>    ├── vinyl-fs@0.3.14 (graceful-fs@3.0.8, mkdirp@0.5.1, strip-bom@1.0.0, defaults@1.0.3, vinyl@0.4.6, glob-stream@3.1.18, through2@0.6.5, glob-watcher@0.0.6)<br>      ├── chalk@1.1.3 (supports-color@2.0.0, escape-string-regexp@1.0.5, ansi-styles@2.2.1, has-ansi@2.0.0, strip-ansi@3.0.1)<br>      ├── liftoff@2.2.1 (extend@2.0.1, rechoir@0.6.2, flagged-respawn@0.3.2, resolve@1.1.7, findup-sync@0.3.0)<br>     └── gulp-util@3.0.7 (array-differ@1.0.0, array-uniq@1.0.2, lodash._reinterpolate@3.0.0, lodash._reescape@3.0.0, lodash._reevaluate@3.0.0, beeper@1.1.0, object-assign@3.0.0, replace-ext@0.0.1, has-gulplog@0.1.0, fancy-log@1.2.0, gulplog@1.0.0, vinyl@0.5.3, multipipe@0.1.2, lodash.template@3.6.2, through2@2.0.1, dateformat@1.0.12)<br>     52:nodejs lanou$ npm init<br>    This utility will walk you through creating a package.json file.<br>     It only covers the most common items, and tries to guess sensible defaults.</3.0.0></p>
-<pre><code> See `npm help json` for definitive documentation on these fields
+</code></pre><h4 id="学完这些就可以到其官网上找插件了，毕竟插件才是王道。"><a href="#学完这些就可以到其官网上找插件了，毕竟插件才是王道。" class="headerlink" title="学完这些就可以到其官网上找插件了，毕竟插件才是王道。"></a>学完这些就可以到其官网上找插件了，毕竟插件才是王道。</h4><h4 id="终端代码一览："><a href="#终端代码一览：" class="headerlink" title="终端代码一览："></a>终端代码一览：</h4><pre><code>代码：
+Last login: Mon May 16 15:20:21 on ttys000
+ 52:~ lanou$ cd desktop
+ 52:desktop lanou$ nodejs
+-bash: nodejs: command not found
+ 52:desktop lanou$ cd nodejs
+ 52:nodejs lanou$ sudo npm install --global gulp    全局安装gulp
+ npm WARN deprecated graceful-fs@3.0.8: graceful-fs v3.0.0 and before will fail on node releases &gt;= v7.0. Please update to graceful-fs@^4.0.0 as soon as possible. Use &apos;npm ls graceful-fs&apos; to find it in the tree.
+ npm WARN deprecated lodash@1.0.2: lodash@&lt;3.0.0 is no longer maintained. Upgrade to lodash@^4.0.0.
+npm WARN deprecated graceful-fs@1.2.3: graceful-fs v3.0.0 and before will fail on node releases &gt;= v7.0. Please update to graceful-fs@^4.0.0 as soon as possible. Use &apos;npm ls graceful-fs&apos; to find it in the tree.
+  /usr/local/bin/gulp -&gt; /usr/local/lib/node_modules/gulp/bin/gulp.js
+  gulp@3.9.1 /usr/local/lib/node_modules/gulp
+  ├── interpret@1.0.1
+ ├── pretty-hrtime@1.0.2
+├── deprecated@0.0.1
+ ├── archy@1.0.0
+├── minimist@1.2.0
+├── semver@4.3.6
+├── tildify@1.2.0 (os-homedir@1.0.1)
+ ├── v8flags@2.0.11 (user-home@1.1.1)
+ ├── orchestrator@0.3.7 (stream-consume@0.1.0, sequencify@0.0.7, end-of-stream@0.1.5)
+├── vinyl-fs@0.3.14 (graceful-fs@3.0.8, mkdirp@0.5.1, strip-bom@1.0.0, defaults@1.0.3, vinyl@0.4.6, glob-stream@3.1.18, through2@0.6.5, glob-watcher@0.0.6)
+  ├── chalk@1.1.3 (supports-color@2.0.0, escape-string-regexp@1.0.5, ansi-styles@2.2.1, has-ansi@2.0.0, strip-ansi@3.0.1)
+  ├── liftoff@2.2.1 (extend@2.0.1, rechoir@0.6.2, flagged-respawn@0.3.2, resolve@1.1.7, findup-sync@0.3.0)
+ └── gulp-util@3.0.7 (array-differ@1.0.0, array-uniq@1.0.2, lodash._reinterpolate@3.0.0, lodash._reescape@3.0.0, lodash._reevaluate@3.0.0, beeper@1.1.0, object-assign@3.0.0, replace-ext@0.0.1, has-gulplog@0.1.0, fancy-log@1.2.0, gulplog@1.0.0, vinyl@0.5.3, multipipe@0.1.2, lodash.template@3.6.2, through2@2.0.1, dateformat@1.0.12)
+ 52:nodejs lanou$ npm init
+This utility will walk you through creating a package.json file.
+ It only covers the most common items, and tries to guess sensible defaults.
+
+ See `npm help json` for definitive documentation on these fields
   and exactly what they do.
 
 Use `npm install &lt;pkg&gt; --save` afterwards to install a package and
